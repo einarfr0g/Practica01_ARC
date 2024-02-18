@@ -205,7 +205,7 @@ public class Convertidor {
         while (num.length() % 4 != 0) {
             num = "0" + num;
         }
-        System.out.println(num);
+        //System.out.println(num);
         String resultado = "";
 
         for (int i = 0; i < num.length(); i = i + 4) {
@@ -272,7 +272,7 @@ public class Convertidor {
         while (num.length() % 3 != 0) {
             num = "0" + num;
         }
-        System.out.println(num);
+        //System.out.println(num);
         String resultado = "";
 
         for (int i = 0; i < num.length(); i = i + 3) {
@@ -319,6 +319,14 @@ public class Convertidor {
             }
         }
         return String.valueOf(resultado);
+    }
+
+    public void binariocheck() throws IllegalArgumentException{
+        for(int i=0;i<numeroAConvertir.length();i++){
+            if((numeroAConvertir.charAt(i)!='1')&&(numeroAConvertir.charAt(i)!='0')){
+                throw new IllegalArgumentException("Este número no está en binario");
+            }
+        }
     }
 }
 
